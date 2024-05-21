@@ -1,0 +1,6 @@
+# Virtual environment
+venv/
+
+# ignore log files
+/*.log
+/*.bkp
