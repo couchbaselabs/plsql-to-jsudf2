@@ -1,6 +1,6 @@
 # plsql-to-jsudf2
 
-### Use the released executable:
+### Use the release executable:
 1. create output directory: ```mkdir output```
 2. expected arguments:
     *   -u USER, --user USER  < capella-username >
