@@ -49,7 +49,7 @@ END;
 ```
 
 ```
-././plsql-to-jsudf -u <capella-username> -p <capella-password> 
+./plsql-to-jsudf -u <capella-username> -p <capella-password> 
 -cpaddr https://api.cloud.couchbase.com -orgid <oid> -cbhost <server ip-addr> 
  -cbuser <server user-id> -cbpassword <server user-password>  -cbport 18093 script.sql
 ```
