@@ -17,6 +17,10 @@ from the capella connection string: `couchbases://<connection-string>`
 ```nslookup -type=SRV _couchbases._tcp.<connection-string>```
     - this is < server ip-addr >
 
+You can also find the cbhost from Settings->nodes in Capella UI.
+For e.g mine was: svc-dqisa-node-004.kjrnb9kv-tpohdun.cloud.couchbase.com 
+
+
 4. create a database access:
    - this would be  < server user-id >,  < server user-password >
 
