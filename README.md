@@ -18,7 +18,7 @@ Antlr generated PL/SQL listener is used to pull out any Anonymous/Procedure/Func
    `SELECT CLICK, PIT FROM TEST WHERE Pit=2;` in PL/SQL the fieldnames `CLICK`, `PIT` and `Pit` , table `TEST` will all resolve to the right casing of the actual column. This however is not the same in couchbase, both fieldnames and tablenames are expected to be of the same casing as the one created in the datastore.
 
 3. Date-time types</br>
-   Oracle offers DATE and TIMESTAMP [data types](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/heter/date-time-data-types.html#GUID-1FCC665C-67F1-494E-A98B-5DBEAE51C5E6) for representing dates, as well as various functions for manipulating and interacting with them. Couchbase, on the other hand, does not support datetime datatypes because JSON only allows for numbers, characters, and objects.
+   Oracle offers DATE and TIMESTAMP [data types](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/heter/date-time-data-types.html#GUID-1FCC665C-67F1-494E-A98B-5DBEAE51C5E6) for representing dates, as well as various functions for manipulating and interacting with them. Couchbase, on the other hand, does not support datetime datatypes because JSON only allows for numbers, strings, and objects.
 
    Insert's would have to represent date-time as string or unix epoch time(integers).
 
