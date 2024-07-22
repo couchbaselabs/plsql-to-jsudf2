@@ -12,10 +12,17 @@ Antlr generated PL/SQL listener is used to pull out any Anonymous/Procedure/Func
 **Limitations:**</br>
 
 1. Global Variables</br>
-   in couchbase a javascript library doesn't allow global variables whereas plsql support package level as well as cross package global variables
+   In Couchbase a javascript library doesn't allow global variables whereas plsql support package level as well as cross package global variables
 
 2. Case insensive fieldnames and table names</br>
    `SELECT CLICK, PIT FROM TEST WHERE Pit=2;` in PL/SQL the fieldnames `CLICK`, `PIT` and `Pit` , table `TEST` will all resolve to the right casing of the actual column. This however is not the same in couchbase, both fieldnames and tablenames are expected to be of the same casing as the one created in the datastore.
+
+3. Date-time types</br>
+   Oracle offers the DATE and TIMESTAMP [data types](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/heter/date-time-data-types.html#GUID-1FCC665C-67F1-494E-A98B-5DBEAE51C5E6) for representing dates, as well as various functions for manipulating and interacting with them. Couchbase, on the other hand, does not support datetime datatypes because JSON only allows for numbers, characters, and objects.
+
+   Insert's would have to represent date-time as string or unix epoch time(integers).
+
+   Any invocations of oracle's TO_DATE(), TO_CHAR(), EXTRACT() or any date specific functions would have to be rewriten using couchbase's [date time functions](https://docs.couchbase.com/server/7.2/n1ql/n1ql-language-reference/datefun.html)  
 
 ## Presetup
 
